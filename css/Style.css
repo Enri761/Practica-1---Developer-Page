@@ -1,3 +1,12 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario:#ffc107;
+    --secundario:#0097a0;
+    --gris: #757575;
+}
+
+
 /* Texto para uniformidad entre navegadores*/
 html{
   font-size: 62.5%;
@@ -16,4 +25,32 @@ body{
 
 .titulo span{
   font-size: 2rem;
+}
+
+.navegacion-principal{
+background-color: var(--secundario);
+padding: 1rem;
+display: flex;
+/*justify content para FILAS / align items es para COLUMNAS (flex-direction)*/
+justify-content: space-between;
+font-weight: bold;
+font-size: 2rem;
+}
+
+.navegacion-principal a:hover{
+  background-color: #ffc107;
+  color:#212121
+}
+.navegacion-principal a{
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.contenedor{
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.nav-bg{
+  background-color: var(--secundario);
 }
