@@ -4,6 +4,7 @@
     --primario:#ffc107;
     --secundario:#0097a0;
     --gris: #757575;
+    --grisClaro:#b6b6b6;
 }
 
 
@@ -14,21 +15,36 @@ html{
 
 body{
   font-size: 16px;
+  font-family: 'Krub', sans-serif;
+  background: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
 /* */
 
+h1{
+  font-size: 3.8rem;
+}
+
+h2{
+  font-size: 2.8rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h1, h2, h3{
+  text-align: center;
+}
 .titulo{
   text-align: center;
   font-size: 3.8rem;
 }
-
 .titulo span{
   font-size: 2rem;
 }
 
 .navegacion-principal{
-background-color: var(--secundario);
 padding: 1rem;
 display: flex;
 /*justify content para FILAS / align items es para COLUMNAS (flex-direction)*/
@@ -47,10 +63,53 @@ font-size: 2rem;
 }
 
 .contenedor{
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
 .nav-bg{
   background-color: var(--secundario);
+}
+
+.hero{
+background-image: url(../img/hero.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 450px; /*Alto del elemento hero*/
+position: relative; /*Para manipular la posición. El padre siempre debe ser relativo*/
+}
+
+.contenido-hero{
+  position: absolute; /* Para manipular la posición. El padre siempre debe ser absolute */
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  /*Alinear vertical y horizontal*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.boton{
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  text-decoration: none; /para quitar la linea/
+  text-transform: uppercase; /*convertir el texto en mayuscula */
+  font-weight: bold; /negritas/
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-radius: .5rem;
+  width: auto;
+  text-align: center;
+}
+
+.ubicacion{
+display: flex;
+align-items: center;
+justify-content: center;
 }
